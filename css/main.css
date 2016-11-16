@@ -154,17 +154,20 @@ body {
 }
 
 .row > div {
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 0;
+  height: 33.3vh;
 }
 
 .thumbnail {
-  height: 16em;
+  width: 100%;
+  min-width: 380px;
+  height: 33.3vh;
   border-width: 0;
   border-radius: 0;
   padding: 0;
   display: inline-block;
   overflow: hidden;
+  margin: 0;
 }
 
 .thumbnail > img {
@@ -200,8 +203,6 @@ body {
 
   #page-content-wrapper {
       padding: 0;
-      padding: 15px;
-      padding-left: 0;
       position: relative;
   }
 }
