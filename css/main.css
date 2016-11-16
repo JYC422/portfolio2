@@ -75,7 +75,7 @@ body {
     margin-left: -250px;
     overflow-y: hidden;
     background: #000;
-    background-image: url(../assets/bg.jpg);
+    background-image: url(../assets/bg.png);
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -204,10 +204,12 @@ body {
 
 .caption-techs {
   font-size: 1.25em;
+  word-spacing: 0.5em;
 }
 
 h1 {
   font-size: 7em;
+  margin-bottom: 0.5em;
 }
 
 #about {
@@ -218,7 +220,7 @@ h1 {
 
 #left {
   height: 100%;
-  background-color: #222;
+  background-color: #111;
   padding: 4em;
 }
 
@@ -233,23 +235,31 @@ h1 {
 
 #right-top,
 #right-bottom {
-  height: 50%;
+
 }
 
 #right-top {
-  background-image: url(../assets/bg.jpg);
+  height: 60%;
+  background-image: url(../assets/bg.png);
   background-size: cover;
+  padding: 2em;
+}
+
+.devicon {
+  font-size: 5em;
+  text-align: center;
 }
 
 #right-bottom {
+  height: 40%;
   background-image: url(../assets/me.png);
-  background-size: auto 100%;
+  background-size: contain;
 }
 
 #contact {
   height: 100vh;
   min-height: 780px;
-  background-image: url(../assets/bg2.jpg);
+  background-image: url(../assets/bg2.png);
   background-size: cover;
   color: white;
 }
@@ -260,7 +270,7 @@ h1 {
 
 #contact > div > p {
   font-size: 2em;
-  margin-top: 2em;
+  margin-top: 1em;
 }
 
 .icons {
@@ -268,6 +278,7 @@ h1 {
   padding: 0;
   margin: 0;
   margin-top: 5em;
+  margin-bottom: 5em;
 }
 
 .icons > li {
@@ -281,8 +292,33 @@ h1 {
 }
 
 .icons > li > a:hover {
-  color: #888;
+  color: #777;
   transition: color 0.5s ease;
+}
+
+.modal-content {
+  padding: 2em;
+  width: 80vw;
+  margin: 1em auto;
+}
+
+.modal-content > img {
+  width: 100%;
+}
+
+.cv {
+  border-radius: 0;
+  font-size: 2em;
+  width: 7em;
+  border: solid 0.1em white;
+  background-color: transparent;
+  color: white;
+}
+
+.cv:hover {
+  background-color: white;
+  color: #555;
+  border-color: white;
 }
 
 @media(min-width:992px) {
