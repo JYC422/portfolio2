@@ -1,13 +1,37 @@
+@font-face {
+    font-family: big;
+    src: url(gotcha.ttf);
+}
+
+@font-face {
+    font-family: medium;
+    src: url(hikou.otf);
+}
+
+@font-face {
+    font-family: small;
+    src: url(glacial.otf);
+}
+
+@font-face {
+    font-family: oh;
+    src: url(asphalt.otf);
+}
+
 html {
   overflow: hidden;
   height: 100%;
 }
 
 body {
-  background: #555;
   box-sizing: border-box;
   overflow: auto;
   height: 100%;
+  font-family: small;
+    background-image: url(../assets/bg2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 /*NAV HOVER*/
@@ -30,12 +54,13 @@ body {
 
 .text {
   color: #fff;
-  font-size: 22px;
+  font-size: 1.8em;
   letter-spacing: 5px;
   line-height: 32px;
   position: relative;
   top: -55px;
   margin-left: 1em;
+  font-family: medium;
 }
 
 @keyframes draw {
@@ -85,8 +110,6 @@ body {
 #page-content-wrapper {
     width: 100%;
     position: relative;
-    padding: 15px;
-    padding-left: 0;
 }
 
 .container-fluid {
@@ -130,28 +153,77 @@ body {
 }
 
 #home {
-  width: 100%;
-  height: 100%;
+  text-align: center;
+  margin: auto;
+  color: black;
+  font-size: 5em;
+  text-indent: 0;
+  font-family: big;
+  letter-spacing: 0.2em;
+  color: white;
   display: table-cell;
   vertical-align: middle;
 }
 
-#home a {
-  text-align: center;
-  width: 80%;
-  height: 80%;
-  margin: auto;
-  background-color: gray;
-  background-image: url(../assets/img.png);
-  color: black;
-  font-size: 4em;
-  line-height: 2em;
-  text-indent: 0;
+#home:hover {
+  color: #777;
+  transition: color 0.5s ease;
 }
 
-#home a:hover {
-  background: url(../assets/gif.gif);
+/*LANDING PAGE*/
+
+#landing {
+  height: 100vh;
+  min-height: 780px;
+  color: white;
+  padding: 2em;
 }
+
+#landing-content {
+  height: 100%;
+  width: 100%;
+  min-width: 500px;
+  background-color: #111;
+  padding-left: 10em;
+}
+
+h2 {
+  font-family: oh;
+  font-size: 10em;
+  padding-top: 1em;
+}
+
+h3 {
+  font-family: small;
+  font-size: 2em;
+  padding: 1em 0;
+  margin: 0;
+}
+
+h4 {
+  font-family: small;
+  font-size: 2em;
+  padding-bottom: 2em;
+  margin: 0;
+}
+
+.explore {
+  border-radius: 0;
+  font-size: 2em;
+  width: 7em;
+  border: solid 0.1em white;
+  background-color: transparent;
+  color: white;
+}
+
+.explore:hover {
+  background-color: white;
+  color: #222;
+  border-color: white;
+}
+
+
+/*PROJECTS*/
 
 .project {
   padding: 0;
@@ -200,6 +272,8 @@ body {
 
 .caption-title {
  font-size: 2.5em;
+ font-family: medium;
+ letter-spacing: 0.3em;
 }
 
 .caption-techs {
@@ -207,9 +281,13 @@ body {
   word-spacing: 0.5em;
 }
 
+/*ABOUT*/
+
 h1 {
   font-size: 7em;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.3em;
+  font-family: big;
+  letter-spacing: 0.2em;
 }
 
 #about {
@@ -220,55 +298,74 @@ h1 {
 
 #left {
   height: 100%;
-  background-color: #111;
-  padding: 4em;
+  padding: 2em;
 }
 
-#left > p {
+#left-content {
+  height: 100%;
+  background-color: #111;
+  padding: 3em;
+}
+
+#left-content > p {
   font-size: 1.5em;
 }
 
 #right {
   height: 100%;
-  padding: 0;
-}
-
-#right-top,
-#right-bottom {
-
+  padding: 1em;
+  padding-left: 0;
 }
 
 #right-top {
   height: 60%;
+  padding: 1em;
+
+}
+
+#right-top-content {
+  height: 100%;
   background-image: url(../assets/bg.png);
   background-size: cover;
-  padding: 2em;
 }
 
 .devicon {
   font-size: 5em;
   text-align: center;
+  margin-top: 0.1em;
 }
 
 #right-bottom {
   height: 40%;
+  padding: 1em;
+}
+
+#right-bottom-content {
+  height: 100%;
   background-image: url(../assets/me.png);
   background-size: contain;
 }
 
+/*CONTACT*/
+
 #contact {
   height: 100vh;
   min-height: 780px;
-  background-image: url(../assets/bg2.png);
-  background-size: cover;
-  color: white;
 }
 
 #contact > div {
-  padding: 4em;
+  padding: 2em;
+  height: 100%;
 }
 
-#contact > div > p {
+#contact-content {
+  height: 100%;
+  padding: 3em;
+  color: white;
+  background-color: #111;
+}
+
+#contact-content > p {
   font-size: 2em;
   margin-top: 1em;
 }
@@ -277,8 +374,8 @@ h1 {
   list-style: none;
   padding: 0;
   margin: 0;
-  margin-top: 5em;
-  margin-bottom: 5em;
+  margin-top: 4em;
+  margin-bottom: 4em;
 }
 
 .icons > li {
@@ -317,7 +414,7 @@ h1 {
 
 .cv:hover {
   background-color: white;
-  color: #555;
+  color: #222;
   border-color: white;
 }
 
